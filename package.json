@@ -1,0 +1,42 @@
+{
+  "name": "graphql-schema-pipeline",
+  "version": "1.0.0",
+  "description": "GraphQL schema visualization pipeline based on GraphQL Voyager architecture",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest",
+    "test:watch": "vitest --watch",
+    "dev": "tsc --watch"
+  },
+  "keywords": [
+    "graphql",
+    "schema",
+    "visualization",
+    "introspection",
+    "type-graph"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/icons-material": "^7.3.2",
+    "@mui/material": "^7.3.2",
+    "claude": "^0.1.1",
+    "graphql": "^16.8.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "reactflow": "^11.11.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/react": "^19.1.16",
+    "@types/react-dom": "^19.1.9",
+    "@vitejs/plugin-react": "^5.0.4",
+    "typescript": "^5.0.0",
+    "vite": "^7.1.7",
+    "vitest": "^1.0.0"
+  }
+}
