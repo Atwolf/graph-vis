@@ -125,6 +125,20 @@ export function extractGraph(introspectionData: {
     }
   }
 
+  const edgesByType = {
+    FIELD: edges.filter(e => e.edgeType === EdgeType.FIELD).length,
+    IMPLEMENTS: edges.filter(e => e.edgeType === EdgeType.IMPLEMENTS).length,
+    UNION_MEMBER: edges.filter(e => e.edgeType === EdgeType.UNION_MEMBER).length
+  };
+
+  console.log('[GRAPH] Type graph extracted', {
+    nodeCount: nodes.size,
+    edgeCount: edges.length,
+    edgesByType,
+    rootType: rootNode.name,
+    timestamp: new Date().toISOString()
+  });
+
   return {
     nodes,
     edges,

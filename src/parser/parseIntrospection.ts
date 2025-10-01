@@ -31,6 +31,14 @@ export function parseIntrospection(
 
   const queryTypeName = schema.queryType?.name || null;
 
+  console.log('[PARSE] Introspection parsed', {
+    totalTypes: schema.types.length,
+    filteredTypes: types.length,
+    queryType: queryTypeName,
+    removedIntrospectionTypes: schema.types.length - types.length,
+    timestamp: new Date().toISOString()
+  });
+
   return {
     types,
     queryTypeName,

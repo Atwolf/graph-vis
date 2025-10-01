@@ -47,6 +47,19 @@ export function toReactFlow(graph: TypeGraph): ReactFlowData {
   // Apply layout algorithm
   const nodesWithLayout = layoutNodes(reactFlowNodes, reactFlowEdges);
 
+  const nodesByKind: Record<string, number> = {};
+  reactFlowNodes.forEach(node => {
+    nodesByKind[node.data.kind] = (nodesByKind[node.data.kind] || 0) + 1;
+  });
+
+  console.log('[VISUALIZATION] Converted to React Flow format', {
+    nodeCount: nodesWithLayout.length,
+    edgeCount: reactFlowEdges.length,
+    nodesByKind,
+    layoutApplied: true,
+    timestamp: new Date().toISOString()
+  });
+
   return {
     nodes: nodesWithLayout,
     edges: reactFlowEdges,

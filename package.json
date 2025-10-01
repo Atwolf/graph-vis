@@ -5,10 +5,11 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && vite build",
     "test": "vitest",
     "test:watch": "vitest --watch",
-    "dev": "tsc --watch"
+    "dev": "vite",
+    "preview": "vite preview"
   },
   "keywords": [
     "graphql",
@@ -25,7 +26,9 @@
     "@mui/icons-material": "^7.3.2",
     "@mui/material": "^7.3.2",
     "claude": "^0.1.1",
+    "dotenv": "^17.2.3",
     "graphql": "^16.8.0",
+    "node-fetch": "^3.3.2",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "reactflow": "^11.11.4"
